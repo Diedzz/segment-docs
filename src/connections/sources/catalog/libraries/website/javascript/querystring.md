@@ -18,14 +18,14 @@ Here are the *optional* query parameters to use:
 For example, this URL:
 
 ```text
-http://segment.com/?ajs_uid=123456789abcd&ajs_event=Clicked%20Email&ajs_aid=abc123&ajs_prop_emailCampaign=First+Touch&ajs_trait_name=Karl+Jr.
+http://segment.com/?ajs_uid=123456789abcd&ajs_event=Email%20Clicked&ajs_aid=abc123&ajs_prop_emailCampaign=First+Touch&ajs_trait_name=Karl+Jr.
 ```
 
 would create the following events on the page.
 
 ```js
 analytics.identify('123456789abcd', { name: 'Karl Jr.' });
-analytics.track('Clicked Email', { 'emailCampaign': 'First Touch' });
+analytics.track('Email Clicked', { 'emailCampaign': 'First Touch' });
 analytics.user().anonymousId('abc123');
 ```
 
